@@ -8,6 +8,8 @@ gray: #7f7770
     --orange: #e2a355;
     --orange-clean: #deb37e;
     --gray: #7f7770;
+    --dark-grey: #68635f;
+    --light-gray: #c3bfdc;
 }
 
 body {
@@ -15,11 +17,15 @@ body {
 }
 
 /* header styles */
+
+/*
+*BARRA DE BUSCA
+*/
 .searchbar {
     margin-bottom: auto;
     margin-top: auto;
     height: 60px;
-    background-color: #353b48;
+    background-color: var(--light-gray);
     border-radius: 30px;
     padding: 10px;
 }
@@ -37,14 +43,14 @@ body {
 
 .searchbar:hover>.search_input {
     padding: 0 10px;
-    width: 450px;
+    width: 200px;
     caret-color: red;
     transition: width 0.4s linear;
 }
 
 .searchbar:hover>.search_icon {
     background: white;
-    color: #e74c3c;
+    color: var(--orange);
 }
 
 .search_icon {
@@ -55,6 +61,12 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    color: white;
+    color: var(--dark-grey);
     text-decoration: none;
+}
+
+/* 
+*CELULAR E TABLETS 
+*/
+@media screen and (max-width: 992px) {
 }
