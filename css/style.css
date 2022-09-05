@@ -18,6 +18,18 @@ body {
 
 /* header styles */
 
+.bg-papel-bottom {
+    background-image: url('../img/bg-rasgado-branco-base.png');
+    height: 165px;
+    background-size: 100%;
+    background-position: 0 70px;
+    background-repeat: no-repeat;
+}
+
+.logo {
+    height: 80px;
+}
+
 /*
 *BARRA DE BUSCA
 */
