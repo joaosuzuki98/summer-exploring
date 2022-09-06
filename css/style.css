@@ -19,10 +19,9 @@ body {
 /* header styles */
 
 .bg-papel-bottom {
-    background-image: url('../img/bg-rasgado-branco-base.png');
-    height: 165px;
+    background-image: url('../img/bg-rasgado-branco-topo.png');
     background-size: 100%;
-    background-position: 0 70px;
+    background-position: 0 -50px;
     background-repeat: no-repeat;
 }
 
@@ -77,8 +76,29 @@ body {
     text-decoration: none;
 }
 
-/* 
-*CELULAR E TABLETS 
-*/
-@media screen and (max-width: 992px) {
+.bg-folhas-left {
+    background-image: url('../img/bg-sombra-folhagem.png');
+    background-repeat: no-repeat;
+    background-position: 0 bottom;
+}
+
+/* Our little bootstrap */
+.txt-laranja {
+    color: var(--orange);
+}
+
+.txt-cinza {
+    color: var(--gray);
+}
+
+.bg-laranja {
+    background-color: var(--orange-clean);
+}
+
+.bg-cinza {
+    background-color: var(--gray);
+}
+
+.bg-cinza-op5 {
+    background-color: rgba(127, 119, 112, 0.5);
 }
