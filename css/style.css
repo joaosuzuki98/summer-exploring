@@ -102,3 +102,24 @@ body {
 .bg-cinza-op5 {
     background-color: rgba(127, 119, 112, 0.5);
 }
+
+.altura-500px {
+    height: 500px;
+}
+
+/* múltiplos backgrounds */
+.bg-3 {
+    background-image: url('../img/bg-rasgado-branco-topo.png'), url('../img/bg-sombra-folhagem.png'), url('../img/bg-rasgado-branco-base.png');
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 100%, 30%, 100%;
+    background-position: 0 -70px, 0 center, 0 400px;
+}
+
+.flip-x {
+    transform: scaleX(-1);
+}
+
+.expand-4:hover {
+    width: 33%;
+    transition: width 0.4s ease-in-out;
+}
