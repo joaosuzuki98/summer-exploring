@@ -21,7 +21,7 @@ body {
 .bg-papel-bottom {
     background-image: url('../img/bg-rasgado-branco-topo.png');
     background-size: 100%;
-    background-position: 0 -50px;
+    background-position: 0 -20px;
     background-repeat: no-repeat;
 }
 
@@ -80,6 +80,7 @@ body {
     background-image: url('../img/bg-sombra-folhagem.png');
     background-repeat: no-repeat;
     background-position: 0 bottom;
+    background-attachment: fixed;
 }
 
 /* Our little bootstrap */
@@ -107,6 +108,14 @@ body {
     height: 500px;
 }
 
+.bg-altura-px {
+    height: 15%;
+}
+
+.margin-px {
+    margin-top: 7%;
+}
+
 /* múltiplos backgrounds */
 .bg-3 {
     background-image: url('../img/bg-rasgado-branco-topo.png'), url('../img/bg-sombra-folhagem.png'), url('../img/bg-rasgado-branco-base.png');
@@ -122,4 +131,49 @@ body {
 .expand-4:hover {
     width: 33%;
     transition: width 0.4s ease-in-out;
+}
+
+.bg-topo-base-rasgado {
+    background-image: url('../img/bg-rasgado-branco-topo.png'), url('../img/bg-rasgado-branco-base.png');
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100%, 100%;
+    background-position: 0 -80px, 0 100%;
+}
+
+/* Animista */
+.kenburns-bottom {
+    -webkit-animation: kenburns-bottom 5s ease-out both;
+    animation: kenburns-bottom 5s ease-out both;
+}
+
+@-webkit-keyframes kenburns-bottom {
+    0% {
+        -webkit-transform: scale(1) translateY(0);
+        transform: scale(1) translateY(0);
+        -webkit-transform-origin: 50% 84%;
+        transform-origin: 50% 84%;
+    }
+
+    100% {
+        -webkit-transform: scale(1.25) translateY(15px);
+        transform: scale(1.25) translateY(15px);
+        -webkit-transform-origin: bottom;
+        transform-origin: bottom;
+    }
+}
+
+@keyframes kenburns-bottom {
+    0% {
+        -webkit-transform: scale(1) translateY(0);
+        transform: scale(1) translateY(0);
+        -webkit-transform-origin: 50% 84%;
+        transform-origin: 50% 84%;
+    }
+
+    100% {
+        -webkit-transform: scale(1.25) translateY(15px);
+        transform: scale(1.25) translateY(15px);
+        -webkit-transform-origin: bottom;
+        transform-origin: bottom;
+    }
 }
