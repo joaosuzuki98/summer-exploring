@@ -175,12 +175,12 @@
     </section>
 
     <section id="promocao" class="d-flex flex-wrap my-4">
-      <div class="col-md-6">
-        <img src="./img/grupo-4-tres-amigos.jpg " data-aos="fade-up-right" class="w-100"
-          alt="Aventureiros olhando o horizonte">
+      <div class="col-md-6" data-aos="fade-up-right" data-aos-delay="200">
+        <img src="./img/grupo-4-tres-amigos.jpg " class="w-100" alt="Aventureiros olhando o horizonte">
       </div>
 
-      <div class="col-md-6 bg-cinza py-5 px-5 d-flex flex-column justify-content-center" data-aos="fade-up-left">
+      <div class="col-md-6 bg-cinza py-5 px-5 d-flex flex-column justify-content-center" data-aos="fade-up-left"
+        data-aos-delay="200">
         <h2 class="text-light fw-bold">Descontos de até 50% em todas as excursões</h2>
         <p class="text-light">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, omnis facere! Inventore voluptatum commodi
@@ -189,7 +189,8 @@
         </p>
       </div>
 
-      <div class="col-md-6 bg-laranja py-5 px-5 d-flex flex-column justify-content-center" data-aos="fade-up-right">
+      <div class="col-md-6 bg-laranja py-5 px-5 d-flex flex-column justify-content-center" data-aos="fade-up-right"
+        data-aos-delay="200">
         <h2 class="text-light fw-bold">
           Na compra de 1 excursão você ganha mais uma
         </h2>
@@ -200,7 +201,7 @@
         </p>
       </div>
 
-      <div class="col-md-6" data-aos="fade-up-left">
+      <div class="col-md-6" data-aos="fade-up-left" data-aos-delay="200">
         <img src="./img/grupo-3-tres-amigos.jpg"
           alt="Três pessoas sentadas em uma pedra em uma montanha olhando para o horizonte" class="w-100">
       </div>
@@ -265,26 +266,131 @@
         Preencha o formulário abaixo, queremos saber, quem você é.
       </p>
 
-      <form action="" method="POST" enctype="multipart/form-data" style="min-height: 430px;">
+      <!-- Formulário -->
+      <form action="" method="POST" enctype="multipart/form-data" class="pb-5 mb-5 needs-validation" novalidate>
+
+        <!-- Campo de nome -->
         <div class="mb-3">
-          <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite o seu nome inteiro">
+          <input type="text" required name="nome" id="nome" class="form-control" placeholder="Digite o seu nome inteiro">
+          <div class="invalid-feedback">Digite o seu nome</div>
         </div>
 
+        <!-- Campo de email -->
         <div class="mb-3">
-          <input type="email" class="form-control" name="email" id="email" placeholder="Digite seu email">
+          <input type="email" required class="form-control" name="email" id="email" placeholder="Digite seu email">
+          <div class="invalid-feedback">Digite um email válido</div>
         </div>
 
+        <!-- Campo de sexo -->
         <fieldset class="border border-secondary p-3">
           <legend>Sexo:</legend>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="sexo" id="sexo1" value="Feminino">
+            <input class="form-check-input" required type="radio" name="sexo" id="sexo1" value="Feminino">
             <label class="form-check-label" for="">Feminino</label>
           </div>
+          <span class="invalid-feedback">Escolha uma opção</span>
+
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="sexo" id="sexo2" value="Masculino">
+            <input class="form-check-input" required type="radio" name="sexo" id="sexo2" value="Masculino">
             <label class="form-check-label" for="">Masculino</label>
           </div>
+          <span class="invalid-feedback">Escolha uma opção</span>
         </fieldset>
+
+        <!-- Campo de idade -->
+        <p class="m-0 mt-2">Sua idade: <span id="txt-idade" class="fw-bold"></span></p>
+        <input type="range" class="form-range" id="idade" name="idade" value="18" min="16" max="90">
+
+        <!-- Campo de telefone -->
+        <div class="mb-3">
+          <label for="telefone" class="form-label">Seu Telefone:</label>
+          <input type="tel" name="telefone" id="" class="form-control" placeholder="Inclua DDD">
+        </div>
+
+        <!-- Campo de senha -->
+        <div class="mb-3">
+          <label for="senha" class="form-label">Digite uma senha:</label>
+          <input type="password" class="form-control" name="senha" id="" placeholder="">
+        </div>
+
+        <!-- Campo de foto -->
+        <div class="mb-3">
+          <label for="foto" class="form-label">Selecione uma foto para o seu perfil</label>
+          <input type="file" class="form-control" name="foto" id="" placeholder="" aria-describedby="fileHelpId">
+          <div id="fileHelpId" class="form-text">Somente JPG, PNG ou GIF</div>
+        </div>
+
+        <!-- Seleção de estado e cidade -->
+        <div class="mb-3 col-md-6">
+          <label for="estado" class="form-label">Selecione o seu Estado (UF)</label>
+          <select class="form-control" name="estado" id="estado">
+            <option value="São Paulo">São Paulo</option>
+            <option value="Minas Gerais">Minas Gerais</option>
+            <option value="Bahia">Bahia</option>
+            <option value="Pernambuco">Pernambuco</option>
+          </select>
+        </div>
+
+        <div class="mb-3 col-md-6">
+          <label for="cidade" class="form-label">Selecione a sua cidade</label>
+          <select class="form-control" name="cidade" id="cidade">
+            <option value="São Paulo">São Paulo</option>
+            <option value="São José dos Campos">São José dos Campos</option>
+            <option value="Jacareí">Jacareí</option>
+            <option value="Caçapava">Caçapava</option>
+          </select>
+        </div>
+
+        <!-- Seleção de destinos -->
+        <p class="m-0">Selecione os destinos que gostaria de explorar:</p>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="destinos[]" value="Brotas - SP" id="">
+          <label class="form-check-label" for="">
+            Brotas - SP
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="destinos[]" value="Bonito - MS" id="">
+          <label class="form-check-label" for="">
+            Bonito - MS
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="destinos[]" value="Jalapão - TO" id="">
+          <label class="form-check-label" for="">
+            Jalapão - TO
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="destinos[]" value="Grand Canyon - Arizona, USA" id="">
+          <label class="form-check-label" for="">
+            Grand Canyon - Arizona, USA
+          </label>
+        </div>
+
+        <!-- Seleção de hospedagem -->
+        <p class="m-0 mt-3">Selecione o tipo de hospedagem:</p>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" name="hospedagem" value="acampar">
+          <label class="form-check-label" for="flexSwitchCheckDefault">Acampar (Raiz)</label>
+        </div>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" name="hospedagem" value="hotel/pousada">
+          <label class="form-check-label" for="flexSwitchCheckChecked">Hotel/Pousada (Nutela)</label>
+        </div>
+
+        <!-- Campo de sugestão -->
+        <div class="m-0 mt-3">
+          <label for="mensagem" class="form-label">Envie sugestões / críticas</label>
+          <textarea class="form-control" name="mensagem" id="" rows="5" maxlength="256"></textarea>
+        </div>
+
+        <input type="hidden" name="dt-cadastro" id="dt-cadastro" value="">
+
+        <button type="submit" class="btn btn-primary mb-5 mt-3">Enviar</button>
       </form>
     </section>
 
