@@ -12,7 +12,7 @@ const mostraData = () => {
     let mes = dataAtual.getMonth() + 1
     let ano = dataAtual.getFullYear()
     let hora = dataAtual.getHours()
-    let valor = dia + '/' + mes + '/' + ano + '-' + hora 
+    let valor = dia + '/' + mes + '/' + ano + '-' + hora
 
     document.getElementById('dt-cadastro').value = valor
 }
@@ -25,11 +25,32 @@ const getEstados = () => {
     // Lê a API através do fetch(), 1º then captura dos dados, 2º then trata os dados
     fetch(api).then(resposta => resposta.json()).then(json => {
         let options = '<option>Selecione</option>'
-        
+
+        for (const index in json) {
+            options += `<option value=${json[index].sigla}>${json[index].nome}</option>`
+        }
+
         select.innerHTML = options
     })
 }
 
+// Preenche o select de cidades de acordo com o UF selecionado
+// A função recebe um parâmetro (uf) com o ID da UF
+const getCidadesByUf = (uf) => {
+    let api = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${uf}/municipios`
+    let select = document.getElementById('cidade')
+
+    fetch(api).then(resposta => resposta.json()).then(json => {
+        let options = '<option>Selecione</option>'
+
+        for (const index in json) {
+            options += `<option value=${json[index].nome}>${json[index].nome}</option>`
+        }
+
+        select.innerHTML = options
+    })
+
+}
 
 // Eventos e execuções automáticas
 mostraIdade()
@@ -63,3 +84,7 @@ AOS.init();
             }, false)
         })
 })()
+
+document.getElementById('estado').addEventListener('change', function () {
+    getCidadesByUf(this.value)
+})
