@@ -125,6 +125,10 @@ body {
     background-color: rgba(127, 119, 112, 0.5);
 }
 
+.bg-laranja-escuro {
+    background-color: var(--orange);
+}
+
 .altura-500px {
     height: 500px;
 }
@@ -133,8 +137,46 @@ body {
     height: 15%;
 }
 
+.bg-altura-vh {
+    height: 55vh;
+}
+
+.padding-percent {
+    padding-top: 10%;
+}
+
+.slide-title-font {
+    font-size: 4rem;
+    color: var(--orange);
+    text-align: start;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.slide-font {
+    font-size: 1.5rem;
+    color: var(--dark-grey);
+}
+
+.left-text-shadow {
+    font-size: 4rem;
+    text-align: end;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.padding-percent-bottom {
+    padding-bottom: 15%;
+}
+
 .margin-px {
     margin-top: 7%;
+}
+
+.footer-brand-link {
+    height: 40px;
+    width: 40px;
+    color: var(--gray);
+    background-color: white;
+    border-radius: 50%;
 }
 
 /* múltiplos backgrounds */

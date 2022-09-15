@@ -16,9 +16,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
 
   <!-- Biblioteca de ícones -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Bootstrap CSS v5.2.0-beta1 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
@@ -89,22 +89,40 @@
           <div class="carousel-item active">
             <img src="./img/banner-topo-aventureira.jpg" class="w-100 d-block kenburns-bottom" alt="First slide">
             <div class="carousel-caption d-none d-md-block">
-              <h3>Title</h3>
-              <p>Description</p>
+              <div class="d-flex flex-column padding-percent-bottom justify-content-end align-items-start col-5">
+                <h3 class="text-uppercase slide-title-font fw-bold">Tá na hora de caminhar</h3>
+                <h4 class="slide-font fw-bold">Loremipsum Dolor</h4>
+                <button class="rounded-5 border-0 bg-light txt-cinza text-uppercase p-2 mt-4 mb-2 col-4 fw-bold">
+                  Leia mais
+                </button>
+                <p class="txt-cinza text-start">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam delectus non veniam nam, iusto error saepe neque. Cumque optio reprehenderit quas necessitatibus ipsa odit quod quaerat sed architecto, enim nesciunt.</p>
+              </div>
             </div>
           </div>
           <div class="carousel-item">
             <img src="./img/banner-topo-jeep.jpg" class="w-100 d-block kenburns-bottom" alt="Second slide">
             <div class="carousel-caption d-none d-md-block">
-              <h3>Title</h3>
-              <p>Description</p>
+              <div class="d-flex flex-column padding-percent-bottom justify-content-end align-items-start col-5">
+                <h3 class="text-uppercase slide-title-font fw-bold">Tá na hora de caminhar</h3>
+                <h4 class="slide-font fw-bold text-light">Loremipsum Dolor</h4>
+                <button class="rounded-5 border-0 bg-light txt-cinza text-uppercase p-2 mt-4 mb-2 col-4 fw-bold">
+                  Leia mais
+                </button>
+                <p class="text-light text-start">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam delectus non veniam nam, iusto error saepe neque. Cumque optio reprehenderit quas necessitatibus ipsa odit quod quaerat sed architecto, enim nesciunt.</p>
+              </div>
             </div>
           </div>
           <div class="carousel-item">
             <img src="./img/banner-topo-montanha.jpg" class="w-100 d-block kenburns-bottom" alt="Third slide">
             <div class="carousel-caption d-none d-md-block">
-              <h3>Title</h3>
-              <p>Description</p>
+              <div class="d-flex flex-column padding-percent-bottom justify-content-end align-items-start col-5">
+                <h3 class="text-uppercase slide-title-font fw-bold">Tá na hora de caminhar</h3>
+                <h4 class="slide-font fw-bold text-light">Loremipsum Dolor</h4>
+                <button class="rounded-5 border-0 bg-light txt-cinza text-uppercase p-2 mt-4 mb-2 col-4 fw-bold">
+                  Leia mais
+                </button>
+                <p class="text-light text-start">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam delectus non veniam nam, iusto error saepe neque. Cumque optio reprehenderit quas necessitatibus ipsa odit quod quaerat sed architecto, enim nesciunt.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -168,7 +186,7 @@
 
       <div class="d-grid col-2 mx-auto mt-4 expand-4">
         <button class="rounded-5 border-0 bg-cinza text-light p-3">
-          Show More
+          Mostrar mais
         </button>
       </div>
 
@@ -187,6 +205,9 @@
           eum eos mollitia similique, vel porro quod dolorem veritatis possimus explicabo aliquid incidunt. Dolorum,
           nobis quam.
         </p>
+        <button class="rounded-5 border-0 bg-laranja-escuro text-light text-uppercase py-3 px-2 mt-4 mb-2 col-6 fw-bold">
+          Leia mais
+        </button>
       </div>
 
       <div class="col-md-6 bg-laranja py-5 px-5 d-flex flex-column justify-content-center" data-aos="fade-up-right"
@@ -199,6 +220,9 @@
           minus nostrum voluptates, recusandae harum iusto facere consequatur officia iste, rem quia numquam, quasi
           voluptatum veniam?
         </p>
+        <button class="rounded-5 border-0 bg-laranja-escuro text-light text-uppercase py-3 px-2 mt-4 mb-2 col-6 fw-bold">
+          Leia mais
+        </button>
       </div>
 
       <div class="col-md-6" data-aos="fade-up-left" data-aos-delay="200">
@@ -219,8 +243,8 @@
       <div class="col-12 position-relative mt-5">
         <img src="./img/grupo-6-escalada.jpg" data-aos="zoom-out-left" class="w-100"
           alt="Mulher escalando uma montanha">
-        <h2 class="position-absolute top-50 end-0 px-5 txt-laranja text-uppercase fw-bold fs-1 fst-italic ">Explore o
-          <span class="txt-cinza">mundo</span>
+        <h2 class="position-absolute top-50 end-0 px-5 txt-laranja text-uppercase fw-bold col-4 fst-italic left-text-shadow">Explore 
+          <span class="txt-cinza">o mundo</span>
         </h2>
       </div>
 
@@ -249,6 +273,7 @@
 
       <div
         class="col-12 my-5 altura-500px bg-folhas-left flip-x d-flex flex-column justify-content-center align-items-center">
+        <i class="fa-solid fa-quote-left fa-2xl"></i>
         <p class="col-md-6 p-4 fs-3 text-center flip-x">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, soluta aliquam? Placeat alias quas
           quibusdam, cumque, facilis et facere consequuntur beatae velit error deleniti reprehenderit praesentium porro
@@ -271,7 +296,8 @@
 
         <!-- Campo de nome -->
         <div class="mb-3">
-          <input type="text" required name="nome" id="nome" class="form-control" placeholder="Digite o seu nome inteiro">
+          <input type="text" required name="nome" id="nome" class="form-control"
+            placeholder="Digite o seu nome inteiro">
           <div class="invalid-feedback">Digite o seu nome</div>
         </div>
 
@@ -384,39 +410,69 @@
 
         <input type="hidden" name="dt-cadastro" id="dt-cadastro" value="">
 
-        <button type="submit" class="btn btn-primary mb-5 mt-3">Enviar</button>
+        <button type="submit" class="btn btn-primary mb-5 mt-3 bg-cinza border-0">Enviar</button>
       </form>
     </section>
 
   </main>
 
   <footer>
-    <div class="altura-500px bg-cinza col-md-10 offset-1 bg-2 mt-3 d-flex justify-content-evenly align-items-center">
-      <div class="col-md-3">
+    <div
+      class="bg-altura-vh bg-cinza col-md-10 offset-1 bg-2 mt-3 d-flex justify-content-evenly align-items-start padding-percent">
+      <div class="col-md-3 mt-4">
         <h2 class="text-light">Title here</h2>
-        <p class="text-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum ut libero itaque fuga? Excepturi veritatis iusto laudantium sed dolore culpa earum tenetur quibusdam. Blanditiis corrupti voluptatum doloribus, odio quasi illo.</p>
+        <p class="text-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum ut libero itaque fuga?
+          Excepturi veritatis iusto laudantium sed dolore culpa earum tenetur quibusdam. Blanditiis corrupti voluptatum
+          doloribus, odio quasi illo.</p>
+        <div class="d-flex flex-row justify-content-between col-md-6">
+          <div class="footer-brand-link d-flex justify-content-center align-items-center">
+            <i class="fa-brands fa-instagram fa-2xl"></i>
+          </div>
+          <div class="footer-brand-link d-flex justify-content-center align-items-center">
+            <i class="fa-brands fa-facebook-f fa-xl"></i>
+          </div>
+          <div class="footer-brand-link d-flex justify-content-center align-items-center">
+            <i class="fa-brands fa-twitter fa-xl"></i>
+          </div>
+          <div class="footer-brand-link d-flex justify-content-center align-items-center">
+            <i class="fa-brands fa-whatsapp fa-2xl"></i>
+          </div>
+        </div>
       </div>
 
-      <div class="col-md-2">
-        <h2 class="text-light">About</h2>
-        <p class="text-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum ut libero itaque fuga? Excepturi veritatis iusto laudantium sed dolore culpa earum tenetur quibusdam. Blanditiis corrupti voluptatum doloribus, odio quasi illo.</p>
+      <div class="col-md-2 d-flex flex-column justify-content-evenly mt-4">
+        <h2 class="text-light mb-3">About</h2>
+        <p class="text-light">History</p>
+        <p class="text-light">Our team</p>
+        <p class="text-light">Brand Guidelines</p>
+        <p class="text-light">Terms & Condition</p>
+        <p class="text-light">Privacy Policy</p>
       </div>
 
-      <div class="col-md-2">
-        <h2 class="text-light">Services</h2>
-        <p class="text-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum ut libero itaque fuga? Excepturi veritatis iusto laudantium sed dolore culpa earum tenetur quibusdam. Blanditiis corrupti voluptatum doloribus, odio quasi illo.</p>
+      <div class="col-md-2 d-flex flex-column justify-content-evenly mt-4">
+        <h2 class="text-light mb-3">Services</h2>
+        <p class="text-light">How to Order</p>
+        <p class="text-light">Our Product</p>
+        <p class="text-light">Order Status</p>
+        <p class="text-light">Promo</p>
+        <p class="text-light">Payment Method</p>
       </div>
-      
-      <div class="col-md-2">
-        <h2 class="text-light">Others</h2>
-        <p class="text-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum ut libero itaque fuga? Excepturi veritatis iusto laudantium sed dolore culpa earum tenetur quibusdam. Blanditiis corrupti voluptatum doloribus, odio quasi illo.</p>
+
+      <div class="col-md-2 d-flex flex-column justify-content-evenly align-items-start mt-4">
+        <h2 class="text-light mb-3">Others</h2>
+        <p class="text-light">Contact Us</p>
+        <p class="text-light">Help</p>
+        <p class="text-light">Privacy</p>
       </div>
     </div>
+
+    <p class="text-center my-3">Desenvolvido por <a href="https://github.com/joaosuzuki98" target="_blank">João Suzuki</a></p>
   </footer>
 
   <a href="#" class="back-to-top" id="back-to-top">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+      class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
     </svg>
   </a>
 
