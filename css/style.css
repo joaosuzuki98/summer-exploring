@@ -84,6 +84,26 @@ body {
     background-attachment: fixed;
 }
 
+.back-to-top {
+    position: fixed;
+    display: none;
+    height: 60px;
+    width: 60px;
+    bottom: 20px;
+    right: 40px;
+    background-color: rgba(83, 81, 78, 0.2);
+    border-radius: 10px;
+    color: white;
+    transition: background-color 500ms;
+    -webkit-animation: fade-seta 500ms ease-out both;
+    animation: fade-seta 500ms ease-out both;
+}
+
+.back-to-top:hover {
+    color: white;
+    background-color: rgba(231, 14, 14, 0.2);
+}
+
 /* Our little bootstrap */
 .txt-laranja {
     color: var(--orange);
@@ -124,6 +144,14 @@ body {
     background-size: 100%, 30%, 100%;
     background-position: 0 -70px, 0 center, 0 400px;
 }
+
+.bg-2 {
+    background-image: url('../img/bg-rasgado-branco-topo.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0 -70px;
+}
+
 
 .flip-x {
     transform: scaleX(-1);
@@ -176,5 +204,25 @@ body {
         transform: scale(1.25) translateY(15px);
         -webkit-transform-origin: bottom;
         transform-origin: bottom;
+    }
+}
+
+@keyframes fade-seta {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@-webkit-keyframes fade-seta {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100%;
     }
 }

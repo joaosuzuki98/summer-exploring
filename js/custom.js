@@ -2,7 +2,8 @@
 const mostraIdade = () => {
     let span = document.getElementById('txt-idade')
     let campoIdade = document.getElementById('idade')
-    span.innerText = campoIdade.value
+    let valor = campoIdade.value
+    span.innerText = valor
 }
 
 var dataAtual = new Date()
@@ -52,6 +53,17 @@ const getCidadesByUf = (uf) => {
 
 }
 
+const rolagem = () => { 
+    const html = document.documentElement
+    const seta = document.getElementById('back-to-top')
+    
+    if (html.scrollTop > 550) {
+        seta.style.display = 'block'
+    } else {
+        seta.style.display = 'none'
+    }
+}
+
 // Eventos e execuções automáticas
 mostraIdade()
 document.getElementById('idade').addEventListener('change', mostraIdade)
@@ -86,5 +98,8 @@ AOS.init();
 })()
 
 document.getElementById('estado').addEventListener('change', function () {
+    // o valor do id estado é usado no parâmetro
     getCidadesByUf(this.value)
 })
+
+window.onscroll = () => rolagem()
