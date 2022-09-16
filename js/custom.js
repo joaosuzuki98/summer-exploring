@@ -102,4 +102,4 @@ document.getElementById('estado').addEventListener('change', function () {
     getCidadesByUf(this.value)
 })
 
-window.onscroll = () => rolagem()
+window.onscroll = () => rolagem() // evento somente para elementos que existem no html
